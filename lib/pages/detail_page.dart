@@ -95,7 +95,7 @@ class _DetailPageState extends State<DetailPage> {
                               text: pexelsPhoto.src!.large!,
                             ),
                           );
-                          toast('Copied to Clipboard');
+                          toast('Copied to clipboard');
                         },
                         child: const Icon(Icons.link),
                       ),
@@ -107,7 +107,7 @@ class _DetailPageState extends State<DetailPage> {
                             child: Container(
                               padding: const EdgeInsets.all(8),
                               child: Text(
-                                'By ${pexelsPhoto.src!.large!}',
+                                pexelsPhoto.src!.large!,
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
                               ),
