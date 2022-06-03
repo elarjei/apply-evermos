@@ -1,4 +1,4 @@
-import 'package:apply_evermos/constants/constant_secret.dart';
+import 'package:apply_evermos/constants/constants_secret.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

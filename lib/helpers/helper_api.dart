@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:http/http.dart' as http;
 
-import '../constants/constant_secret.dart';
+import '../constants/constants_secret.dart';
 
 abstract class HelperApi {
   static Future<http.Response> getPexelsApi(String apiUrl) async {
