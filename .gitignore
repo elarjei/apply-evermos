@@ -47,4 +47,4 @@ app.*.map.json
 /android/app/release
 
 # hide secret data
-/lib/constants/constants_secret.dart
+/lib/constants/constant_secret.dart
