@@ -21,7 +21,9 @@ class PexelsPhotoListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       elevation: 2,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(5),
+      ),
       child: Row(
         children: [
           Container(

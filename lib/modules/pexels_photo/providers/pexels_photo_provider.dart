@@ -11,7 +11,9 @@ class PexelsPhotosProvider with ChangeNotifier {
   final List<PexelsPhoto> homePexelsPhotos = [];
 
   List<PexelsPhoto> get pexelsPhotos {
-    return [...homePexelsPhotos];
+    return [
+      ...homePexelsPhotos,
+    ];
   }
 
   PexelsPhoto findPexelsPhotoById(int id) {

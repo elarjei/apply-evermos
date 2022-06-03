@@ -55,7 +55,7 @@ class _PexelsPhotosGridViewState extends State<PexelsPhotosGridView> {
     } on TimeoutException catch (_) {
       toast('Timeout!! Check Your Internet Connection');
     } catch (_) {
-      toast('Something Went Wrong!!');
+      toast('Something went wrong!');
     }
   }
 

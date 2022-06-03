@@ -25,7 +25,7 @@ class _SearchPageState extends State<SearchPage> {
       _searchedPexelsPhotos.clear();
     });
     if (query.isEmpty) {
-      toast('Enter Something To Search For');
+      toast('Search some photo...');
       return;
     }
     try {
@@ -67,13 +67,14 @@ class _SearchPageState extends State<SearchPage> {
     } on TimeoutException catch (_) {
       toast('Timeout!! Check Your Internet Connection');
     } catch (_) {
-      toast('Something Went Wrong!');
+      toast('Something went wrong!');
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final deviceSize = MediaQuery.of(context).size;
+
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(

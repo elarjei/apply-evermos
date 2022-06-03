@@ -44,7 +44,7 @@ class _DetailPageState extends State<DetailPage> {
       }
     } on PlatformException catch (error) {
       debugPrint('$error');
-      toast('Something Went Wrong! Try Again');
+      toast('Something went wrong!');
     }
   }
 
