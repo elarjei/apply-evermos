@@ -61,20 +61,20 @@ class _PexelsPhotosGridViewState extends State<PexelsPhotosGridView> {
 
   void managePexelsPhotoDetailsNavigation(
     BuildContext context,
-    PexelsPhoto wallpaper,
+    PexelsPhoto pexelsPhoto,
   ) {
-    final wallpapersProvider = Provider.of<PexelsPhotosProvider>(
+    final pexelsPhotosProvider = Provider.of<PexelsPhotosProvider>(
       context,
       listen: false,
     );
     if (widget.screenName != ScreenName.home) {
-      wallpapersProvider.addPexelsPhotoToPexelsPhotos(wallpaper);
+      pexelsPhotosProvider.addPexelsPhotoToPexelsPhotos(pexelsPhoto);
     }
     Navigator.of(context)
-        .pushNamed(DetailPage.routeName, arguments: wallpaper.id!)
+        .pushNamed(DetailPage.routeName, arguments: pexelsPhoto.id!)
         .then((_) {
       if (widget.screenName != ScreenName.home) {
-        wallpapersProvider.removeNewlyAddedPexelsPhoto();
+        pexelsPhotosProvider.removeNewlyAddedPexelsPhoto();
       }
     });
   }

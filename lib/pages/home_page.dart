@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    _wallpapersFuture = _obtainPexelsPhotosFuture();
+    _pexelsPhotosFuture = _obtainPexelsPhotosFuture();
     isSelected = <bool>[
       true,
       false,
@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
     isGridView = true;
   }
 
-  Future? _wallpapersFuture;
+  Future? _pexelsPhotosFuture;
   Future _obtainPexelsPhotosFuture() {
     return Provider.of<PexelsPhotosProvider>(
       context,
@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: _wallpapersFuture,
+      future: _pexelsPhotosFuture,
       builder: (context, dataSnapShot) {
         if (dataSnapShot.connectionState == ConnectionState.waiting) {
           return const Center(
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
           );
         } else {
           return Consumer<PexelsPhotosProvider>(
-            builder: (context, wallpapersProvider, _) {
+            builder: (context, pexelsPhotosProvider, _) {
               return Column(
                 children: [
                   Container(
@@ -118,10 +118,10 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     child: isGridView
                         ? PexelsPhotosGridView(
-                            pexelsPhotos: wallpapersProvider.pexelsPhotos,
+                            pexelsPhotos: pexelsPhotosProvider.pexelsPhotos,
                           )
                         : PexelsPhotosListView(
-                            pexelsPhotos: wallpapersProvider.pexelsPhotos,
+                            pexelsPhotos: pexelsPhotosProvider.pexelsPhotos,
                           ),
                   ),
                 ],

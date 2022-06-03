@@ -14,7 +14,7 @@ import '../widgets/toast_widget.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
-  static const routeName = '/wallpaper-details';
+  static const routeName = '/pexelsPhoto-details';
 
   @override
   State<DetailPage> createState() => _DetailPageState();

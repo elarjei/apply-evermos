@@ -17,7 +17,7 @@ class PexelsPhotosProvider with ChangeNotifier {
   }
 
   PexelsPhoto findPexelsPhotoById(int id) {
-    return homePexelsPhotos.firstWhere((wallpaper) => wallpaper.id == id);
+    return homePexelsPhotos.firstWhere((pexelsPhoto) => pexelsPhoto.id == id);
   }
 
   void addPexelsPhotoToPexelsPhotos(PexelsPhoto addedPexelsPhoto) {
@@ -51,26 +51,26 @@ class PexelsPhotosProvider with ChangeNotifier {
             jsonDecode(response.body) as Map<String, dynamic>?;
         if (extractedData == null) return;
         List<PexelsPhoto> loadedPexelsPhotos = [];
-        extractedData['photos'].forEach((wallpaper) {
+        extractedData['photos'].forEach((pexelsPhoto) {
           loadedPexelsPhotos.add(
             PexelsPhoto(
-              id: wallpaper['id'],
-              width: wallpaper['width'],
-              height: wallpaper['height'],
-              imageUrl: wallpaper['image_url'],
-              alt: wallpaper['alt'],
-              photographer: wallpaper['photographer'],
-              photographerId: wallpaper['photographer_id'],
-              avgColor: wallpaper['avg_color'],
-              photographerUrl: wallpaper['photographer_url'],
+              id: pexelsPhoto['id'],
+              width: pexelsPhoto['width'],
+              height: pexelsPhoto['height'],
+              imageUrl: pexelsPhoto['image_url'],
+              alt: pexelsPhoto['alt'],
+              photographer: pexelsPhoto['photographer'],
+              photographerId: pexelsPhoto['photographer_id'],
+              avgColor: pexelsPhoto['avg_color'],
+              photographerUrl: pexelsPhoto['photographer_url'],
               src: PexelsPhotoSource(
-                original: wallpaper['src']['original'],
-                large2x: wallpaper['src']['large2x'],
-                large: wallpaper['src']['large'],
-                medium: wallpaper['src']['medium'],
-                portrait: wallpaper['src']['portrait'],
-                small: wallpaper['src']['small'],
-                tiny: wallpaper['src']['tiny'],
+                original: pexelsPhoto['src']['original'],
+                large2x: pexelsPhoto['src']['large2x'],
+                large: pexelsPhoto['src']['large'],
+                medium: pexelsPhoto['src']['medium'],
+                portrait: pexelsPhoto['src']['portrait'],
+                small: pexelsPhoto['src']['small'],
+                tiny: pexelsPhoto['src']['tiny'],
               ),
             ),
           );
