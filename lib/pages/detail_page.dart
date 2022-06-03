@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 import '../helpers/helper_hex_color.dart';
 import '../modules/favorites/providers/favorites_provider.dart';
 import '../modules/pexels_photo/providers/pexels_photo_provider.dart';
-import '../widgets/toast.dart';
+import '../widgets/toast_widget.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);

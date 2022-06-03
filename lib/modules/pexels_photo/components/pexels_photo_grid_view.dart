@@ -5,7 +5,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
 
 import '../../../pages/detail_page.dart';
-import '../../../widgets/toast.dart';
+import '../../../widgets/toast_widget.dart';
 import '../models/pexels_photo_model.dart';
 import '../providers/pexels_photo_provider.dart';
 import 'pexels_photo_grid_item.dart';

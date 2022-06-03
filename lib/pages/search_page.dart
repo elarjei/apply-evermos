@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import '../helpers/helper_api.dart';
 import '../modules/pexels_photo/components/pexels_photo_grid_view.dart';
 import '../modules/pexels_photo/models/pexels_photo_model.dart';
-import '../widgets/toast.dart';
+import '../widgets/toast_widget.dart';
 
 class SearchPage extends StatefulWidget {
   const SearchPage({Key? key}) : super(key: key);
