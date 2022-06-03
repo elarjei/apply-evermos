@@ -19,3 +19,10 @@ standard for generating files after create some or modify some
 ## screenshots from previous run on android
 
 head to */screenshots*
+
+## running app
+
+- choose your device
+- head to */lib*
+- choose *main_production.dart*
+- run project
