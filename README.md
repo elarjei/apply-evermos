@@ -1,6 +1,7 @@
 # apply_evermos
 
-a new project
+- mobile app assesement
+- using pexels public api
 
 ## start
 
@@ -26,3 +27,10 @@ head to */screenshots*
 - head to */lib*
 - choose *main_production.dart*
 - run project
+
+## notes
+
+- there are some areas that still not polished
+- some are still empty files
+- some others are need refactoring
+- thanks for the opportunity
