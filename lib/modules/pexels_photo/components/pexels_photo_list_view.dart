@@ -69,6 +69,13 @@ class _PexelsPhotosListViewState extends State<PexelsPhotosListView> {
     if (widget.screenName != ScreenName.home) {
       wallpapersProvider.addPexelsPhotoToPexelsPhotos(wallpaper);
     }
+    Navigator.of(context)
+        .pushNamed(DetailPage.routeName, arguments: wallpaper.id!)
+        .then((_) {
+      if (widget.screenName != ScreenName.home) {
+        wallpapersProvider.removeNewlyAddedPexelsPhoto();
+      }
+    });
   }
 
   @override
